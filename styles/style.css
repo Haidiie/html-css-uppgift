@@ -1,0 +1,76 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* =================
+Typografi
+=================== */
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgb(23, 67, 78);
+    font-size: 30px;
+    margin-bottom: 0px;
+}
+
+.subtitle{
+    font-weight: 700;
+    color: rgb(73, 187, 240);
+    font-size: 11px;
+    margin: 0;
+}
+
+/* =================
+Layout
+=================== */
+
+header{
+    text-align: center;
+    background: #f8f8f8;
+    padding: 35px;
+}
+
+
+/* =================
+Navigation
+=================== */
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    
+}
+
+nav li{
+    
+
+    margin: 0 1em;
+}
+
+nav a{
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+
+}
+
+nav a:hover,
+nav a:focus{
+    color: #1792d2;
+}
+
+.current-page{
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover{
+    color: #707070;
+}
