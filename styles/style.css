@@ -15,7 +15,7 @@ h1{
     font-weight: 400;
     color: rgb(23, 67, 78);
     font-size: 30px;
-    margin-bottom: 0px;
+    margin: 0px;
 }
 
 .subtitle{
@@ -29,10 +29,31 @@ h1{
 Layout
 =================== */
 
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
 header{
-    text-align: center;
     background: #f8f8f8;
     padding: 35px;
+}
+
+@media (max-width: 712px){
+    .container-nav{
+        flex-direction: column;
+    }
+
+    header{
+        text-align: center;
+    }
+
 }
 
 
@@ -50,15 +71,14 @@ nav ul {
 }
 
 nav li{
-    
-
-    margin: 0 1em;
+    margin-left: 32px;
 }
 
 nav a{
     text-decoration: none;
     color: #707070;
     font-weight: 700;
+    
 
 }
 
@@ -73,4 +93,14 @@ nav a:focus{
 
 .current-page:hover{
     color: #707070;
+}
+
+@media (max-width: 712px){
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav li{
+        margin: 10px;
+    }
 }
