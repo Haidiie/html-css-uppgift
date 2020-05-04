@@ -1,21 +1,39 @@
 
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial;
+    font-weight: 300;
 }
 
-
+img {
+    max-width: 100%;
+    display: block;
+}
 
 /* =================
 Typografi
 =================== */
 
-h1{
-    font-family: Arial, Helvetica, sans-serif;
+
+h1,h2,h3 {
+    font-family: Arial;
     font-weight: 400;
     color: rgb(23, 67, 78);
+    margin-top: 0;
+}
+
+
+h1{
     font-size: 30px;
     margin: 0px;
+}
+
+a {
+    color: #1792d2;
+}
+
+strong {
+    font-weight: 700;
 }
 
 .subtitle{
@@ -25,6 +43,46 @@ h1{
     margin: 0;
 }
 
+.page-title {
+    font-size: 24px;
+}
+
+.page-read-more, .page-info{
+    font-size: 14px;
+}
+
+.page-read-more{
+    color: #1792d2;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.page-read-more:hover,
+.page-read-more:focus{
+    color: #143774;
+    text-decoration: underline;
+}
+
+.page-info {
+    margin: 12px 0 32px 0;
+}
+
+.widget-title,
+.widget-new-post-title{
+    font-size: 16px;
+    text-align: center;
+}
+
+.widget-title{
+    font-family: arial;
+    font-weight: 700;
+}
+
+.widget-new-post-title{
+    margin: 16px 0 4px;
+}
+
+
 /* =================
 Layout
 =================== */
@@ -33,27 +91,41 @@ Layout
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-}
-
-.container-nav{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
+
+
 header{
-    background: #f8f8f8;
+    background: #e6e6e6;
     padding: 35px;
+    text-align: center;
+    margin-bottom: 48px;
 }
 
-@media (max-width: 712px){
-    .container-nav{
-        flex-direction: column;
+footer{
+    background: #143774;
+    color: white;
+    text-align: center;
+    padding: 48px 0;
+}
+
+@media (min-width: 800px){
+    .container{
+        flex-direction: row;
     }
 
-    header{
-        text-align: center;
+    main {
+        width: 75%;
     }
 
+    aside {
+        width: 23%;
+        min-width: 200px;
+        margin-left: 16px;   
+    }
 }
 
 
@@ -95,7 +167,7 @@ nav a:focus{
     color: #707070;
 }
 
-@media (max-width: 712px){
+@media (max-width: 800px){
     nav ul{
         flex-direction: column;
     }
@@ -103,4 +175,62 @@ nav a:focus{
     nav li{
         margin: 10px;
     }
+}
+
+/* articles */
+
+.page-front {
+    border-bottom: #707070 1px solid;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.page-new {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+}
+
+.page-new-main {
+    order: 2
+}
+
+.page-new-secondary {
+    order: 1;
+}
+
+@media (min-width: 675px){
+    .page-new {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .page-new-main{
+        width: 68%;
+    }
+
+    .page-new-secondary{
+        width: 30%;
+    }
+
+    .page-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+/* widget */
+
+.sidebar-widget {
+    border: 20px solid #efefef;
+    margin-bottom: 32px;
+    padding: 16px;
+}
+
+.widget.new-post {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #707070;
 }
